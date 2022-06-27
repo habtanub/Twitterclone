@@ -1,24 +1,17 @@
 {% extends "base.html" %} {% block content %} {% load static %}
 <section class="content">
   <div class="header">
-    <img
-      src="{% static 'img/techis-logo (1).png' %}"
-      alt=""
-      style="width: 60px"
-    />
-    <h3>Home</h3>
+    <img src="/static/img/logo-twitter-png-5860.png" alt=""style='width:60px;'>
+    <h1>Home</h1>
   </div>
   <!-- Input Section -->
   <section class="post_form">
     <form action="/" method="POST" enctype="multipart/form-data">
       {% csrf_token %}
-      <input type="text" name="name" placeholder="name" required />
-      <input name="body" placeholder="hello you r awesome!" required />
-      <input type="file" name="image" />
-      <div class="input1">
-        {% comment %} <input type="submit" value="Tweet" /> {% endcomment %}
-        <button type=“submit” value=“Tweet”>Tweet</button>
-      </div>
+      <input type="text" name="name" placeholder="Name" required />
+      <input name="body" placeholder="What is happening!" required />
+      <input type="file" id="file" name="image" />
+      <input type="submit" id="tweet" value="Tweet" />
     </form>
   </section>
   <!-- Output Post Section -->

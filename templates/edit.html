@@ -28,20 +28,21 @@
 {{post.body}}</textarea
         >
         <label for="{{post.name}}"></label>
-        <input type="file" name="image" id="choose" />
+        <input type="file" id="file" name="image" />
+        <br>
+     
         {% if post.image.url %}
-        <img class="post-img" src="{{ post.image.url }}" style="width: 100%" />
+        <img class="post-img" src="{{ post.image.url }}" style="width: 250px" />
         {% endif %}
         <div class="banner">
           <a class="cancel-anchor" href="/">
             <input
               class="cancel-button"
               type="button"
-              id="delete"
+              id="cancel"
               value="Cancel"
-            />
-          </a>
-          <input id="update-button" type="submit" value="Update" />
+            /></a>
+          <input type="submit" id="tweet" value="update" />
         </div>
       </form>
     </section>

@@ -6,13 +6,20 @@ body{
 
 .content {
     max-width: 600px;
-    height: 100%;
     margin: 0 auto;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
 
 }
-*******
+.header {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.header h1 {
+    padding-left: 10px;
+}
+
 .post_form {
     padding: 20px 40px;
     border-bottom: 1px solid #ccc;
@@ -28,6 +35,23 @@ body{
     width: 70%;
     padding: 10px;
     border: 1px solid #ccc;
+}
+input#file {
+    width: 45%;
+    border: 0;
+    padding-top: 30px;
+}
+
+input#tweet {
+    width: 20%;
+    background-color: rgb(29, 161, 242);
+    color: white;
+    border-radius: 20px;
+}
+input#cancel {
+    width: 20%;
+    background-color: gray;
+    border-radius: 20px;
 }
 .posts ul {
     padding: 0;

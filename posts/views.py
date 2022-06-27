@@ -9,7 +9,7 @@ from django.urls import reverse_lazy, reverse
 # Create your views here.
 def index(request):
     if request.method =='POST':
-        form = PostForm(request.POST)
+        form = PostForm(request.POST, request.FILES)
 
         if form.is_valid():
             form.save()
@@ -20,7 +20,7 @@ def index(request):
             return HttpResponseRedirect(form.errors.as_json())
 
     # Get all posts, limit = 20
-    posts = Post.objects.all()[:20]
+    posts = Post.objects.all().order_by('-created_at')[:20]
     # Show
     return render(request, 'posts.html',
                   {'posts': posts}
